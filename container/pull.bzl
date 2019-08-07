@@ -121,9 +121,9 @@ exports_files(glob(["**"]))
 
     args = [
         python(repository_ctx),
-        repository_ctx.path(repository_ctx.attr._puller),
+        str(repository_ctx.path(repository_ctx.attr._puller)),
         "--directory",
-        repository_ctx.path("image"),
+        str(repository_ctx.path("image")),
         "--os",
         repository_ctx.attr.os,
         "--os-version",
